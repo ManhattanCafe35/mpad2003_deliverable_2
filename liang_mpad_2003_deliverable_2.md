@@ -28,8 +28,11 @@ Use two hashtag symbols (`##`) to create a level 2 heading like this one.
 
 To include a screen capture, use the sample code below. Your images should be saved in the same folder as your `.md` file.
 
-![](import-screen-capture.png)<br>
+![](import-data.png)<br>
 *Figure 1: The "Import file" prompt on Google Sheets.*
+
+![](data-overview.png)<br>
+*Figure 2: The Tennis Courts dataset after importing it into Google Sheets.*
 
 **Here are examples of functions and lines of code put in grey boxes:**
 
