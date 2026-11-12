@@ -43,6 +43,7 @@ The dataset has 132 rows, with each row representing a tennis court location acr
 I would like to use this dataset to map all 74 locations that have pickleball lines across Ottawa. By comparing their locations against the recommended residential buffer distances in the City's 2025 strategy (City of Ottawa, 2025), I want to find out whether Centennial Park is an isolated case or if other neighbourhoods are quietly facing similar noise pressures. I also want to check how outdated the City's records are, such as Centennial Park still being listed with four pickleball courts even though the City did not renew its outdoor pickleball permit.
 
 The spreadsheet is available [here](https://docs.google.com/spreadsheets/d/18VVTWeDrgLcX1MwjUEdpvGhE-dj8CF8pdqz-fCnwe0M/edit?usp=sharing).
+
 **Here are examples of functions and lines of code put in grey boxes:**
 
 1. If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
