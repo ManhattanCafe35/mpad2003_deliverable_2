@@ -1,6 +1,6 @@
-**Date**<br>
-**Course Code & Course Name**<br>
-**Student's First Name & Last Name**<br>
+**Date** November 12, 2026<br>
+**Course Code & Course Name** MPAD2003 Introductory Data Storytelling<br>
+**Student's First Name & Last Name** Ruihua Liang<br>
 **Presented to Jean-Sébastien Marier**<br>
 
 # Deliverable 2: Exploratory Data Analysis (EDA)
@@ -24,16 +24,25 @@ And to create an unordered list, we simply put a star (`*`) before each item.
 
 ## 1. Getting Data
 
-Use two hashtag symbols (`##`) to create a level 2 heading like this one.
+The dataset is called Tennis Courts. It was published by the City of Ottawa (specifically maintained by its Parks Department) on the [Open Ottawa portal](https://open.ottawa.ca/datasets/dba3be479b2d44e2a90b28b522a6e39d_21) (City of Ottawa, 2024).
 
-To include a screen capture, use the sample code below. Your images should be saved in the same folder as your `.md` file.
+I downloaded the data from the Open Ottawa website. It is a CSV file named Tennis_Courts.csv. Then I created a new Google Sheets file, clicked File → Import → Upload, and chose this CSV file. In the pop-up window, I used the default settings (see Figure 1). Then I clicked "Import data" and renamed the spreadsheet "Tennis Courts EDA."
 
 ![](import-data.png)<br>
 *Figure 1: The "Import file" prompt on Google Sheets.*
 
+The dataset has 132 rows, with each row representing a tennis court location across Ottawa. It includes 38 columns that record details for each site, such as the park name, address, number of courts, whether it has lights, and the number of pickleball courts (`PICKLEBALL`) (see Figure 2).
+
 ![](data-overview.png)<br>
 *Figure 2: The Tennis Courts dataset after importing it into Google Sheets.*
 
+* `PICKLEBALL` shows how many pickleball courts are at each location. 74 sites (about 56%) have a value greater than 0, and Centennial Park is still listed as having 4.
+* `MODIFIED_DATE` records when each entry was last updated, with almost all dates falling between 2018 and 2022 (and only two in 2025). Centennial Park was last updated in 2019, suggesting some records may be outdated.
+* `COURT_TYPE` categorizes the facility type, mainly into Public Courts and Membership Clubs, along with a few Private Clubs, School Board Sites, and a Practice Ball Wall.
+
+I would like to use this dataset to map all 74 locations that have pickleball lines across Ottawa. By comparing their locations against the recommended residential buffer distances in the City's 2025 strategy (City of Ottawa, 2025), I want to find out whether Centennial Park is an isolated case or if other neighbourhoods are quietly facing similar noise pressures. I also want to check how outdated the City's records are, such as Centennial Park still being listed with four pickleball courts even though the City did not renew its outdoor pickleball permit.
+
+The spreadsheet is available [here](https://docs.google.com/spreadsheets/d/18VVTWeDrgLcX1MwjUEdpvGhE-dj8CF8pdqz-fCnwe0M/edit?usp=sharing).
 **Here are examples of functions and lines of code put in grey boxes:**
 
 1. If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
