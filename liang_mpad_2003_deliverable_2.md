@@ -59,15 +59,25 @@ This also shows how to create an ordered list. Simply put `1.` before each item.
 
 ### 2.1. VIMO Analysis
 
-Use three hashtag symbols (`###`) to create a level 3 heading like this one. Please follow this template when it comes to level 1 and level 2 headings. However, you can use level 3 headings as you see fit.
+**Missing**
 
-Insert text here.
+I used `=COUNTBLANK(AL2:AL133)` to do a quick missing value check. I found only 1 blank cell in the `PICKLEBALL` column (at Patrick Dugas Park).
 
-Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
+The `OPEN` and `LINK`-related columns are almost completely empty, with 131 to 132 missing values out of 132 rows.
 
-**For example:**
+Also, the row for Mancini Park is missing several facility details, including lights, clubhouse, benches, fence, practice court, and backwall.
 
-As seen in Bounegru & Gray (2011), a data visualization should be clear...
+**Outliers**
+
+Most places only have 1 to 4 tennis courts, but Britannia Park has 13 courts (including 6 indoor courts). Also, most places with pickleball only have 1 to 4 pickleball courts, but Pierre Rocque Park has 8.
+
+**Invalid**
+
+Columns such as `LIGHTS`, `FENCE`, and `BENCHES` use bilingual values ("yes/oui" and "no/non") instead of simple "Yes" or "No." This bilingual format makes counting and analyzing harder, so I need to standardize them before doing further analysis.
+
+**Valid**
+
+Key columns like `ADDRESS`, `COURT_TYPE`, and `NO_COURTS` are filled in for every row and follow a normal format. Also, the number columns for court counts (such as `NO_COURTS` and `PICKLEBALL`) contain only numbers with no text mixed in, so they are ready to use directly (apart from the one blank cell in `PICKLEBALL`).
 
 ### 2.2. Cleaning Data
 
