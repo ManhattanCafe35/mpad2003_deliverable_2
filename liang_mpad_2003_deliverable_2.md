@@ -44,17 +44,6 @@ I would like to use this dataset to map all 74 locations that have pickleball li
 
 The spreadsheet is available [here](https://docs.google.com/spreadsheets/d/18VVTWeDrgLcX1MwjUEdpvGhE-dj8CF8pdqz-fCnwe0M/edit?usp=sharing).
 
-**Here are examples of functions and lines of code put in grey boxes:**
-
-1. If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
-1. If you want to include the entire line of code, do the same thing, albeit with your entire code: `=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)`.
-1. Alternatively, you can put your code in an independent box using the template below:
-
-``` r
-=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
-```
-This also shows how to create an ordered list. Simply put `1.` before each item.
-
 ## 2. Understanding Data
 
 ### 2.1. VIMO Analysis
@@ -81,21 +70,49 @@ Key columns like `ADDRESS`, `COURT_TYPE`, and `NO_COURTS` are filled in for ever
 
 ### 2.2. Cleaning Data
 
-Insert text here.
+Before cleaning, I duplicated the original sheet and named the copy "cleaned," so the raw data stays unchanged.
+
+**Method 1: Removing empty columns**
+
+I removed 7 columns (`OPEN`, `LINK`, `LINK_FR`, `LINK_LABEL`, `LINK_LABEL_FR`, `LINK_DESCRIPTION`, and `LINK_DESCRIPTION_FR`) because they were almost completely empty and provided no useful information for my analysis. By deleting them, the dataset went from 38 columns down to 31 columns, making it much easier to read.
+
+![](cleaning-1.png)<br>
+*Figure 3: The dataset after removing the empty columns.*
+
+**Method 2: Standardizing bilingual values**
+
+Several columns used bilingual text for simple answers. I used the "Find and replace" tool, with "Match entire cell contents" checked so that only exact matches would be changed, to change 338 instances of "yes/oui" to "Yes" and 578 instances of "no/non" to "No." This makes the data much cleaner for counting and filtering.
+
+![](cleaning-2.png)<br>
+*Figure 4: Replacing "yes/oui" with "Yes."*
+
+![](cleaning-3.png)<br>
+*Figure 5: Replacing "no/non" with "No."*
+
+**Method 3: Extracting the year from `MODIFIED_DATE`**
+
+The original `MODIFIED_DATE` column contained full timestamps, which were too detailed. I created a new column called `MODIFIED_YEAR` and used the formula below to extract just the 4-digit year. This helps me easily check how old the city's records are.
+
+``` r
+=VALUE(LEFT(TO_TEXT(Z2),4))
+```
+
+![](cleaning-4.png)<br>
+*Figure 6: The new MODIFIED_YEAR column created with a formula.*
 
 ### 2.3. Analyzing Data
 
-Insert text here.
+I created a pivot table to count how many records were last updated in each year. I set `MODIFIED_YEAR` as the rows and used COUNTA of `OBJECTID` for the values. I chose to count by `OBJECTID` instead of `PARKNAME` because 13 locations, such as private clubs and school sites, do not have a park name recorded.
 
-**This section should include a screen capture of your pivot table, like so:**
+![](pivot-table.png)<br>
+*Figure 7: Pivot table showing the number of records by year last updated.*
 
-![](pivot-table-screen-capture.png)<br>
-*Figure 2: This pivot table shows...*
+The column chart clearly shows that the city's data is quite old. Out of 132 locations, 118 of them (about 89 percent) were last updated in 2021 or earlier. Only 2 records were updated in 2025. This suggests that the dataset may be outdated. It means the data might not show the current reality of the courts, such as newly added pickleball lines or changes such as the end of outdoor pickleball at Centennial Park.
 
-**This section should also include a screen capture of your exploratory chart, like so:**
+![](chart.png)<br>
+*Figure 8: Column chart of tennis court records by year last updated.*
 
-![](chart-screen-capture.png)<br>
-*Figure 3: This exploratory chart shows...*
+
 
 ## 3. Delivering Data
 
