@@ -116,12 +116,16 @@ The column chart clearly shows that the city's data is quite old. Out of 132 loc
 
 ## 3. Delivering Data
 
-Insert text here.
+The story I found is that the City of Ottawa's data may not match reality. Out of 132 tennis court locations, 74 have pickleball lines. However, about 89 percent of the records have not been updated since 2021. For example, Centennial Park is still listed as having 4 pickleball courts, even though the City did not renew its outdoor pickleball permit. Because the data is so outdated, it is difficult for us to know how many other neighbourhoods are quietly facing the same noise problems as Centennial Park.
+
+To further discover this story, I plan to interview three groups of people. First, I would speak to staff from the City of Ottawa Parks Department to ask why the public data is so old and when they plan to fix it. Second, I would talk to residents who live right next to these shared courts to hear if the noise bothers them. Finally, I would interview pickleball and tennis players to understand their experience with sharing the limited courts.
+
+I would also need a few more pieces of information to complete the reporting. First, I need the recommended distance between courts and houses from the new Outdoor Tennis and Pickleball Strategy (City of Ottawa, 2025). Second, I would look for Ottawa 311 noise complaint data to see where people are complaining the most. Finally, I would review past news coverage, such as the reports about the Centennial Park noise conflict, to show the background of this issue (CBC News, 2023).
 
 ## 4. References
 
-Include a list of your references here. Please follow [APA](https://apastyle.apa.org/style-grammar-guidelines/references) or [MLA](https://www.mla.org/MLA-Style) guidelines for references. Hanging paragraphs aren't required though.
+City of Ottawa. (2024). *Tennis courts* [Data set]. Open Ottawa. https://open.ottawa.ca/datasets/dba3be479b2d44e2a90b28b522a6e39d_21
 
-**Here's an example:**
+City of Ottawa. (2025). *Outdoor tennis and pickleball strategy*. Engage Ottawa. https://engage.ottawa.ca/tennis_pickleball
 
-Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
+CBC News. (2023, March 27). *Players, neighbours weigh in on Manotick's pickleball noise issue* [Video]. https://www.cbc.ca/news/canada/ottawa/players-neighbours-weigh-in-on-manotick-s-pickleball-noise-issue-1.6790809
